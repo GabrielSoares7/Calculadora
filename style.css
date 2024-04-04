@@ -1,0 +1,116 @@
+* {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+body {
+    background-image: linear-gradient(45deg, #17ead9, #6078ea);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3em;
+    height: 100vh;
+}
+
+#calc {
+    width: 400px;
+    padding: .5em;
+    background-color: rgba(255, 255, 255, 0.74);
+    color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+#calc h1 {
+    font-size: .8em;
+    font-weight: 300;
+    color: #555;
+}
+
+#operations {
+    text-align: right;
+}
+
+#previous-operation {
+    color: #777;
+    padding: .2em;
+    overflow-wrap: break-word;
+    min-height: 2em;
+}
+
+#current-operation {
+    font-size: 3em;
+    font-weight: 700;
+    padding: .2em;
+    overflow-wrap: break-word;
+    min-height: 2em;
+}
+
+#btns-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 5px;
+}
+
+#btns-container button {
+    border: 1px solid transparent;
+    border-radius: 0;
+    height: 4em;
+    font-size: 1.2em;
+    background-color: #dbdbdb;
+    cursor: pointer;
+}
+
+#btns-container .number {
+    background-color: #f3f3f3;
+}
+
+#btns-container button:hover {
+    background-color: #bababa;
+    border-color: #999;
+}
+
+#btns-container #equal-btn {
+    grid-column: span 2;
+    background-color: #75a5cb;
+}
+
+#btns-container #equal-btn:hover {
+    background-color: #3a91d8;
+}
+
+#logo {
+    width: 100px;
+    position: absolute;
+    top: 80%;
+    left: 90%;
+}
+
+@media (max-width: 1000px) {
+    body {
+        width: 100%;
+    }
+
+    #calc {
+        width: 300px;
+    }
+
+    #current-operation {
+        font-size: 2em;
+    }
+
+    #btns-container button {
+        font-size: 1em;
+    }
+
+    #logo {
+        width: 50px;
+        position: absolute;
+        top: 5%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
